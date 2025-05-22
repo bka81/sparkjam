@@ -1,21 +1,52 @@
+import './HomePage.css';
 import CardOption from '../components/CardOption';
 
 function HomePage() {
   return (
-    <div style={{ textAlign: 'center', padding: '40px' }}>
-      <h1>What can I help you with today?</h1>
-      <div style={{ display: 'flex', justifyContent: 'center', marginTop: '30px', gap: '20px' }}>
+    <div className="homepage">
+      {/* Hero Section */}
+      <section className="hero-section">
+        <div className="hero-left">
+          <h1>Get Clear Answers with PenguinSteps</h1>
+          <br></br>
+          <p>
+            A friendly assistant to help you understand everyday tech questions in simple steps.
+          </p>
+        </div>
+        <div className="hero-right">
+          <img src="/penguin.png" alt="Penguin Mascot" className="hero-image" />
+        </div>
+      </section>
+
+      {/* Decorative Divider */}
+      <div className="wave-divider">
+        <svg viewBox="0 0 1440 320">
+          <path fill="#F8FAFC" fillOpacity="1"
+            d="M0,224L48,202.7C96,181,192,139,288,138.7C384,139,480,181,576,202.7C672,224,768,224,864,192C960,160,1056,96,1152,85.3C1248,75,1344,117,1392,138.7L1440,160L1440,320L0,320Z">
+          </path>
+        </svg>
+      </div>
+
+      {/* Card Options */}
+      <section className="cards-section">
         <CardOption
           title="Fill a Form"
-          description="Use a simple guided form to ask your question."
+          description="Use a simple form to describe your question clearly."
           route="/form"
+          image="/form.jpeg"
         />
         <CardOption
           title="Talk to Assistant"
-          description="Get help from our friendly assistant."
+          description="Chat with our assistant and get step-by-step help like talking to a friend."
           route="/assistant"
+          image="/assistant.jpeg"
         />
-      </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="footer">
+        <p>Made with love to help seniors step into tech confidently.</p>
+      </footer>
     </div>
   );
 }
