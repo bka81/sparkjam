@@ -88,14 +88,14 @@ h1, h2, h3 {
   top: -10px;
   width: 500px;
   height: auto;
-  animation: bounce 3s infinite;
+  animation: bounce 2s infinite;
   filter: drop-shadow(2px 4px 8px rgba(0, 0, 0, 0.2));
 }
 
 
 @keyframes bounce {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
+  50% { transform: translateY(-15px); }
 }
 
 .wave-divider svg {
@@ -122,6 +122,6 @@ h1, h2, h3 {
   color: #4A5B6A;
   text-align: center;
   padding: 18px;
-  font-size: 0.95rem;
+  font-size: 1.2rem;
   margin-top: 60px;
 }
