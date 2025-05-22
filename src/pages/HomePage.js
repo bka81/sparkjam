@@ -10,11 +10,14 @@ function HomePage() {
           <h1>Get Clear Answers with PenguinSteps</h1>
           <br></br>
           <p>
-            A friendly assistant to help you understand everyday tech questions in simple steps.
+            Guiding you through life's little how-tos.
           </p>
         </div>
         <div className="hero-right">
-          <img src="/penguin.png" alt="Penguin Mascot" className="hero-image" />
+          <div className="penguin-wrapper">
+            <img src="/ellipse.png" alt="Ellipse" className="ellipse-image" />
+            <img src="/penguin.png" alt="Penguin Mascot" className="hero-image" />
+          </div>
         </div>
       </section>
 

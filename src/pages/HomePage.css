@@ -29,14 +29,14 @@ h1, h2, h3 {
 
 .hero-left h1 {
   color: #4A5B6A;
-  font-size: 4rem;
+  font-size: 6rem;
   margin-bottom: 20px;
   line-height: 1.2;
 }
 
 .hero-left p {
   color: #6C7A89;
-  font-size: 1.6rem;
+  font-size: 2.6rem;
   max-width: 520px;
   margin-bottom: 30px;
   line-height: 1.6;
@@ -65,12 +65,33 @@ h1, h2, h3 {
   min-width: 280px;
 }
 
+.penguin-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 360px;
+  height: 360px;
+}
+
+.ellipse-image {
+  position: absolute;
+  top: 90px;
+  left: -30px;
+  width: 450px;
+  height: auto;
+  z-index: 1;
+}
+
 .hero-image {
-  max-width: 280px;
+  position: relative;
+  z-index: 2;
+  right: 40px;
+  top: -10px;
+  width: 500px;
   height: auto;
   animation: bounce 3s infinite;
   filter: drop-shadow(2px 4px 8px rgba(0, 0, 0, 0.2));
 }
+
 
 @keyframes bounce {
   0%, 100% { transform: translateY(0); }
