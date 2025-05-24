@@ -38,9 +38,11 @@ const AssistantPage = () => {
                     {conversation
                     .filter((msg)=>msg.role !=='system')
                     .map((msg, i)=> (
-                        <div key={i} className={`message ${msg.role}`}>
-                            {msg.content}
-                        </div>
+                        <div key={i} className={`message ${msg.role}`}
+                            dangerouslySetInnerHTML={{
+                                __html: msg.content.replace(/\n/g, '<br />'),
+                            }}
+                        ></div>
                     ))}
                     {loading && < div className="message assistant">Typing...</div>}
                     <div ref = {chatEndRef} />

@@ -30,6 +30,7 @@ exports.handler = async (event, context) => {
       body: JSON.stringify(data),
     };
   } catch (err) {
+    console.error("Error in chatAssistant:", err); 
     return {
       statusCode: 500,
       body: JSON.stringify({ error: "Chat assistant failed." }),

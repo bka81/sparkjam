@@ -1,10 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Jockey+One&family=Josefin+Sans:wght@400;600&display=swap');
 
+html, body {
+  height: 100%;
+  margin: 0;
+  background-color: #F8FAFC;
+}
 
 .chat-page {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
     max-width: 700px;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 2rem 0 0;
     background-color: #F8FAFC;
     font-family: 'Josefin Sans', sans-serif;
 }
@@ -67,8 +75,10 @@
 .chat-area {
     display: flex;
     flex-direction: column;
+    flex: 1;
     background-color: #F8FAFC;
     font-family: 'Josefin Sans', sans-serif;
+    overflow: hidden;
     
 }
 
@@ -85,10 +95,9 @@
 
 .chat-window {
     background-color: #F8FAFC;
-    padding: 1rem 2rem;
-    padding-bottom: 180px; /* space for fixed input */
+    flex: 1;
     overflow-y: auto;
-    height: calc(100vh - 120px); /* adjust for header + input */
+    padding: 1rem 2rem 180px 2rem; /* bottom space for input */
     animation: fadeInUp 0.4s ease;
 }
 .message {
@@ -108,8 +117,8 @@
     margin-left: auto;
   }
   .message.assistant {
-    background-color: #f0f0f0;
-    align-self: flex-start;
+    background-color: #efeaea;
+    text-align: left;
     margin-right: auto;
   }
   
@@ -141,6 +150,7 @@
   
   .chat-input button {
     padding: 0.75rem 1.5rem;
+    width: 20%;
     border-radius: 12px;
     background-color: #163D61;
     color: white;
