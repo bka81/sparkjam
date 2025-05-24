@@ -17,6 +17,9 @@ export const ChatProvider = ({ children }) => {
         try{
             const response = await fetch("/.netlify/functions/chatAssistant", {
                 method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                  },
                 body: JSON.stringify({conversation: updated }),
             });
             const result = await response.json();
