@@ -1,4 +1,6 @@
-import { useState } from 'react';
+//import { useState } from 'react';
+import React, {useState} from 'react';
+
 import './FormPage.css';
 
 function FormPage() {
@@ -24,8 +26,6 @@ function FormPage() {
     //use api here to pass the data 
     console.log(values)
   }
-
-
 
     return (
       <div className='container'>
@@ -75,7 +75,7 @@ function FormPage() {
 
 
           <label htmlFor='inquirybox'>Question</label>
-          <textarea name='inwuirybox' id='inquirybox' cols='30' rows='10'
+          <textarea name='inquirybox' id='inquirybox' cols='30' rows='10'
           onChange={(e) => handleChanges(e)} placeholder='Please type in your question in the following box :)'></textarea>
 
           <button type='submit'>Submit</button>
@@ -89,5 +89,4 @@ function FormPage() {
 
   }
   
-  export default FormPage;
-  
+export default FormPage;
