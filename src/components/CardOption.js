@@ -6,10 +6,12 @@ function CardOption({ title, description, route, image }) {
 
   return (
     <div className="card-option" onClick={() => navigate(route)}>
-      {image && <img src={image} alt={title} className="card-image" />}
       <h2>{title}</h2>
-      <p>{description}</p>
-      <button className="card-button">Try it now</button>
+      <div className='option-title-image'>
+        {image && <img src={image} alt={title} className="card-image" />}
+        <p>{description}</p>
+      </div>
+      
     </div>
   );
 }

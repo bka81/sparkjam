@@ -37,13 +37,13 @@ function HomePage() {
           title="Fill a Form"
           description="Use a simple form to describe your question clearly."
           route="/form"
-          image="/form.jpeg"
+          image="/form.svg"
         />
         <CardOption
           title="Talk to Assistant"
           description="Chat with our assistant and get step-by-step help like talking to a friend."
           route="/assistant"
-          image="/assistant.jpeg"
+          image="/assistant.svg"
         />
       </section>
 

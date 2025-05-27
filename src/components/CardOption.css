@@ -1,63 +1,68 @@
 .card-option {
   background-color: #D9EAFD;
   border-radius: 20px;
-  width: 500px;
-  padding: 40px 30px;
+  width: 600px;
+  height: 250px;
+  padding: 25px 10px;
   box-shadow: 0 12px 30px rgba(154, 166, 178, 0.15);
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 100px;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   cursor: pointer;
   text-align: center;
-  min-height: 520px;
+  min-height: 250px;
+  margin-top: -10px;
+}
+
+
+
+.option-title-image{
+  margin-top: -120px;
+  display: flex;
+  flex-direction: row;
+  align-items:self-start;
+}
+
+.card-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 60%;
+  border-top-right-radius: 0%;
+  object-fit: cover;
+
+}
+
+
+.card-option h2 {
+  font-family: 'Jockey One', sans-serif;
+  color: #4A5B6A;
+  font-size: 4.3rem;
+  margin-bottom: 25px;
+  margin-top: -20px;
+  line-height: 1;
+}
+.card-option p {
+  color: #6C7A89;
+  font-size: 2.2rem;
+  line-height: 1.3;
+  padding: 0 12px;
+  margin-bottom: 40px;
+  flex-grow: 1;
+  text-align: left;
 }
 
 .card-option:hover {
   transform: translateY(-5px);
   box-shadow: 0 16px 36px rgba(154, 166, 178, 0.25);
+  background-color: #ED8B08;
 }
 
-.card-image {
-  width: 100%;
-  height: 220px;
-  max-width: 280px;
-  object-fit: cover;
-  border-radius: 12px;
-  margin-bottom: 32px;
-  background-color: white;
-}
-
-.card-option h2 {
-  font-family: 'Jockey One', sans-serif;
-  color: #4A5B6A;
-  font-size: 4.6rem;
-  margin-bottom: 14px;
-}
-
-.card-option p {
-  color: #6C7A89;
-  font-size: 2.4rem;
-  line-height: 1.6;
-  padding: 0 12px;
-  margin-bottom: 40px;
-  flex-grow: 1;
-}
-
-.card-button {
-  background-color: #9AA6B2;
+.card-option:hover h2{
   color: white;
-  padding: 24px 36px;
-  font-weight: bold;
-  border: none;
-  border-radius: 6px;
-  font-size: 1.8rem;
-  margin-top: auto;
-  font-family: 'Josefin Sans', sans-serif;
-  transition: background 0.3s ease, transform 0.2s ease;
 }
 
-.card-button:hover {
-  background-color: #4A5B6A;
-  transform: translateY(-2px);
+.card-option:hover p{
+  color: white;
 }
