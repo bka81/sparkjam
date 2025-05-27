@@ -1,5 +1,6 @@
 import './HomePage.css';
 import CardOption from '../components/CardOption';
+import { Link } from 'react-router-dom';
 
 function HomePage() {
   return (
@@ -48,7 +49,10 @@ function HomePage() {
 
       {/* Footer */}
       <footer className="footer">
-        <p>Made with love to help seniors step into tech confidently.</p>
+        <div className="links-to-about-contact">
+          <Link to="/about">About Us</Link>
+          <Link to="/contact">Contact Us</Link>
+        </div>
       </footer>
     </div>
   );

@@ -3,7 +3,8 @@ import HomePage from './pages/HomePage';
 import FormPage from './pages/FormPage';
 import AssistantPage from './pages/AssistantPage';
 import ResponsePage from './pages/ResponsePage';
-import AboutPage from './pages/AboutPage';
+import AboutUs from './pages/AboutUsPage';
+import ContactUs from './pages/ContactPage';
 import { ChatProvider } from './chat/chatAssistantContext';
 
 function App() {
@@ -15,7 +16,8 @@ function App() {
           <Route path="/form" element={<FormPage />} />
           <Route path="/assistant" element={<AssistantPage />} />
           <Route path="/response" element={<ResponsePage />} />
-          <Route path="/about" element={<AboutPage />} />
+          <Route path="/about" element={<AboutUs />} />
+          <Route path="/contact" element={<ContactUs />} />
         </Routes>
       </Router>
       </ChatProvider>
