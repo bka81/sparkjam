@@ -31,29 +31,31 @@ function HomePage() {
         </svg>
       </div>
 
-      {/* Card Options */}
-      <section className="cards-section">
-        <CardOption
-          title="Fill a Form"
-          description="Use a simple form to describe your question clearly."
-          route="/form"
-          image="/form.svg"
-        />
-        <CardOption
-          title="Talk to Assistant"
-          description="Chat with our assistant and get step-by-step help like talking to a friend."
-          route="/assistant"
-          image="/assistant.svg"
-        />
-      </section>
+      <div className='homepage-bottom'>
+        {/* Card Options */}
+        <section className="cards-section">
+          <CardOption
+            title="Fill a Form"
+            description="Use a simple form to describe your question clearly."
+            route="/form"
+            image="/form.svg"
+          />
+          <CardOption
+            title="Talk to Assistant"
+            description="Chat with our assistant and get step-by-step help like talking to a friend."
+            route="/assistant"
+            image="/assistant.svg"
+          />
+        </section>
 
-      {/* Footer */}
-      <footer className="footer">
-        <div className="links-to-about-contact">
-          <Link to="/about">About Us</Link>
-          <Link to="/contact">Contact Us</Link>
-        </div>
-      </footer>
+        {/* Footer */}
+        <footer className="footer">
+          <div className="links-to-about-contact">
+            <Link to="/about">About Us</Link>
+            <Link to="/contact">Contact Us</Link>
+          </div>
+        </footer>
+      </div>
     </div>
   );
 }

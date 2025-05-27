@@ -52,7 +52,7 @@ export const ChatProvider = ({ children }) => {
     };
     
     return(
-        <ChatContext.Provider value= {{conversation, sendMessage, loading}}>
+        <ChatContext.Provider value= {{conversation, sendMessage, loading, setConversation}}>
             {children}
         </ChatContext.Provider>
     );

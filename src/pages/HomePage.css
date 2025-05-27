@@ -1,11 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Jockey+One&family=Josefin+Sans:wght@400;600&display=swap');
 
-body,
+html, body{
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
 .homepage {
   font-family: 'Josefin Sans', sans-serif;
   background-color: #F8FAFC;
-  margin: 0;
-  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 h1, h2, h3 {
@@ -16,10 +21,11 @@ h1, h2, h3 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 50px 10% 20px 10%;
+  padding:30px 10% 7px 10%;
   background-color: #D9EAFD;
   flex-wrap: wrap;
   gap: 40px;
+  margin-bottom: 20px;
 }
 
 .hero-left {
@@ -66,6 +72,7 @@ h1, h2, h3 {
   text-align: center;
   min-width: 280px;
   margin-bottom: -30px;
+  margin-top:10px;
 }
 
 .penguin-wrapper {
@@ -108,6 +115,13 @@ h1, h2, h3 {
   margin-top: -2px;
 }
 
+.homepage-bottom{
+  display: flex;
+  flex-direction: column;
+  flex:1;
+  margin-top: 35px;
+}
+
 .cards-section {
   display: flex;
   flex-direction: row;
@@ -115,21 +129,21 @@ h1, h2, h3 {
   gap: 50px;
   padding: 10px 3%;
   max-width: 1500px;
-  margin: 0 auto;
+  flex: 1;
 }
 
 .footer {
   background-color: #163d61c2;
   text-align: center;
-  padding: 14px;
-  margin-top: 30px;
+  padding: 5px;
+  margin-bottom: 0 auto;
 
 }
 .footer .links-to-about-contact{
   display: flex;
   gap: 30px;
   justify-content: center;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
 }
 .links-to-about-contact a {
   text-decoration: none;
