@@ -1,0 +1,33 @@
+body {
+    background: #D9EAFD;
+    text-align: center;
+    margin: 0; 
+    font-family: sans-serif;
+}
+
+.formcontainer {
+    background-color: #D9EAFD;
+    border-radius: 15px;
+    padding: 30px 80px;
+    transition: transform 0.2s;
+    max-width: 1000px; 
+    margin: auto; 
+    box-sizing: border-box; 
+    text-align: center;
+}
+
+
+h1 {
+    font-size: 55px;
+    color: #32477c;
+    text-align: center;
+
+}
+
+h2 {
+    font-size: 35px;
+    color: #32477c;
+    text-align: center;
+
+}
+

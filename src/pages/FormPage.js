@@ -2,8 +2,13 @@
 import React, { useState } from 'react';
 import './FormPage.css';
 import VoiceInput from './VoiceInput'; // Make sure this path is correct
+import { useNavigate } from 'react-router-dom';
+import ConfirmationPage from './ConfirmationPage';
 
 function FormPage() {
+  const navigate = useNavigate(); 
+
+
   const [values, setValues] = useState({
     firstname: '',
     lastname: '',
@@ -13,22 +18,26 @@ function FormPage() {
     aboutquestion: '',
     inquirybox: ''
   });
+  
+
+
 
   const handleChanges = (e) => {
     setValues({ ...values, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(values);
-    // API call or form submission logic goes here
-  };
+  e.preventDefault();
+  console.log('Submitted values:', values);
+  navigate('/confirmation');
+};
+
 
   return (
     <div className='container'>
-      <h1>Form</h1>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor='firstname'>First Name</label>
+      <h1>Question Form</h1>
+      <form onSubmit={handleSubmit} >
+        <label htmlFor='firstname'>First Name 👤</label>
         <input
           type='text'
           placeholder='Enter First Name'
@@ -36,8 +45,9 @@ function FormPage() {
           onChange={handleChanges}
           required
         />
+        <br></br>
 
-        <label htmlFor='lastname'>Last Name</label>
+        <label htmlFor='lastname'>Last Name 👤</label>
         <input
           type='text'
           placeholder='Enter Last Name'
@@ -45,8 +55,8 @@ function FormPage() {
           onChange={handleChanges}
           required
         />
-
-        <label htmlFor='email'>Email</label>
+      <br></br>
+        <label htmlFor='email'>Email 📧</label>
         <input
           type='email'
           placeholder='Enter Your Email'
@@ -54,8 +64,8 @@ function FormPage() {
           onChange={handleChanges}
           required
         />
-
-        <label htmlFor='phonenumber'>Phone Number</label>
+        <br></br>
+        <label htmlFor='phonenumber'>Phone Number ☎️</label>
         <input
           type='text'
           placeholder='(000) - 000 - 000'
@@ -63,30 +73,45 @@ function FormPage() {
           onChange={handleChanges}
           required
         />
-
-        <label htmlFor='preferredmethodofcontact'>Preferred Method Of Contact</label>
+          <br></br>
+        <label htmlFor='preferredmethodofcontact'>Preferred Method Of Contact?</label>
         <div>
-          <input
-            type='radio'
-            name='preferredmethodofcontact'
-            value='phone'
-            onChange={handleChanges}
-          /> Phone Number
+          <label>
+            <input
+              type='radio'
+              name='preferredmethodofcontact'
+              value='phone'
+              onChange={handleChanges}
+            />
+            <span>Phone Number</span>
+          </label>
 
-          <input
-            type='radio'
-            name='preferredmethodofcontact'
-            value='email'
-            onChange={handleChanges}
-          /> Email
+          <label>
+            <input
+              type='radio'
+              name='preferredmethodofcontact'
+              value='email'
+              onChange={handleChanges}
+            />
+            <span>Email</span>
+          </label>
 
-          <input
-            type='radio'
-            name='preferredmethodofcontact'
-            value='zoom'
-            onChange={handleChanges}
-          /> Zoom Meeting
+          <label>
+            <input
+              type='radio'
+              name='preferredmethodofcontact'
+              value='zoom'
+              onChange={handleChanges}
+            />
+            <span>Zoom Meeting</span>
+          </label>
         </div>
+        <br />
+
+
+        
+        
+        <br></br>
 
         <label htmlFor='aboutquestion'>What is your question about? (optional)</label>
         <select
@@ -103,53 +128,33 @@ function FormPage() {
           <option value='other'>Other</option>
         </select>
 
-        {/* <label htmlFor='questiondeliverymethod'>How Would you like to ask your question?</label>
+          <br></br>
+        <label htmlFor='preferreddeliveryofquestion'>How would you like to ask your question?</label>
         <div>
-          <input
-            type='radio'
-            name='writtenquestion'
-            value='writtenquestion'
-            onChange={handleChanges}
-          /> I want to type it out myself
+          <label>
+            <input
+              type='radio'
+              name='questiontype'
+              value='typingitout'
+              onChange={handleChanges}
+            />
+            <span>I want to type it out</span>
+          </label>
 
-          <input
-            type='radio'
-            name='spokenquestion'
-            value='spokenquestion'
-            onChange={handleChanges}
-          /> I want to record it
-        </div> */}
-
-        <label htmlFor='preferredmethodofcontact'>How would you like to ask your question?</label>
-        <div>
-          <input
-            type='radio'
-            name='preferredmethodofcontact'
-            value='phone'
-            onChange={handleChanges}
-          /> I want to type it out
-
-          <input
-            type='radio'
-            name='preferredmethodofcontact'
-            value='email'
-            onChange={handleChanges}
-          /> I want to say it out loud
+          <label>
+            <input
+              type='radio'
+              name='questiontype'
+              value='sayingitoutloud'
+              onChange={handleChanges}
+            />
+            <span>I want to say it out loud</span>
+          </label>
         </div>
+        <br />
 
 
-        <label htmlFor='inquirybox'>If typing, please write your question in the following box ☺</label>
-        <textarea
-          name='inquirybox'
-          id='inquirybox'
-          cols='30'
-          rows='10'
-          value={values.inquirybox}
-          onChange={handleChanges}
-        ></textarea>
-
-        {/* 🎤 Voice Input for Inquiry Box */}
-        <label htmlFor='inquirybox'>If speaking, press the following button</label>
+        <label htmlFor='inquirybox'>If typing, please write your question in the following box, otherwise press the speak button ☺</label>
         <VoiceInput
           value={values.inquirybox}
           onVoiceInputComplete={(spokenText) => {
@@ -164,10 +169,48 @@ function FormPage() {
 
         />
 
-        <button type='submit'>Submit</button>
+        <br></br>
+        <label htmlFor='preferredtimeofhelp'>How soon do you need help?</label>
+        <div>
+          <label>
+            <input
+              type='radio'
+              name='preferredtimeofhelp'
+              value='ASAP'
+              onChange={handleChanges}
+            />
+            <span>As soon as possible</span>
+          </label>
+
+          <label>
+            <input
+              type='radio'
+              name='preferredtimeofhelp'
+              value='Today is fine'
+              onChange={handleChanges}
+            />
+            <span>Today is fine</span>
+          </label>
+
+          <label>
+            <input
+              type='radio'
+              name='preferredtimeofhelp'
+              value='No rush'
+              onChange={handleChanges}
+            />
+            <span>No rush</span>
+          </label>
+        </div>
+        <br />
+        <button type='submit' onClick={() => navigate(ConfirmationPage)}>Submit</button>
       </form>
     </div>
   );
 }
 
 export default FormPage;
+
+
+
+

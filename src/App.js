@@ -5,6 +5,7 @@ import AssistantPage from './pages/AssistantPage';
 import ResponsePage from './pages/ResponsePage';
 import AboutUs from './pages/AboutUsPage';
 import ContactUs from './pages/ContactPage';
+import ConfirmationPage from './pages/ConfirmationPage';
 import { ChatProvider } from './chat/chatAssistantContext';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
           <Route path="/response" element={<ResponsePage />} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/contact" element={<ContactUs />} />
+          <Route path="/confirmation" element={<ConfirmationPage />} />
         </Routes>
       </Router>
       </ChatProvider>
