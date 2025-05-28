@@ -3,7 +3,7 @@ import { ChatContext } from '../chat/chatAssistantContext';
 import './AssistantPage.css';
 
 const AssistantPage = () => {
-    const { conversation, sendMessage, loading } = useContext (ChatContext);
+    const { conversation, sendMessage, loading, setConversation } = useContext (ChatContext);
     const [input, setInput] = useState('');
     const chatEndRef = useRef(null);
     const [chatNotOpened, setChatNotOpened] = useState(true);
@@ -18,6 +18,14 @@ const AssistantPage = () => {
     useEffect(() => {
         chatEndRef.current?.scrollIntoView({behavior: 'smooth'});
     }, [conversation, loading]);
+
+    useEffect(()=> {
+
+        return()=>{
+            setConversation((prev)=>prev.filter(msg => msg.role ==='system'));
+
+        }
+    },[setConversation]);
 
     return(
         <div className="chatPage">
