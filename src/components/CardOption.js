@@ -2,7 +2,6 @@ import './CardOption.css';
 import { useNavigate, Link } from 'react-router-dom';
 
 function CardOption({ title, description, route, image }) {
-  const navigate = useNavigate();
 
   return (
     <Link to={route} className="card-option" role="button">
