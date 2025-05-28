@@ -129,32 +129,8 @@ function FormPage() {
         </select>
 
           <br></br>
-        <label htmlFor='preferreddeliveryofquestion'>How would you like to ask your question?</label>
-        <div>
-          <label>
-            <input
-              type='radio'
-              name='questiontype'
-              value='typingitout'
-              onChange={handleChanges}
-            />
-            <span>I want to type it out</span>
-          </label>
 
-          <label>
-            <input
-              type='radio'
-              name='questiontype'
-              value='sayingitoutloud'
-              onChange={handleChanges}
-            />
-            <span>I want to say it out loud</span>
-          </label>
-        </div>
-        <br />
-
-
-        <label htmlFor='inquirybox'>If typing, please write your question in the following box, otherwise press the speak button ☺</label>
+        <label htmlFor='inquirybox'>Please write your question in the following box, otherwise press the speak button ☺</label>
         <VoiceInput
           value={values.inquirybox}
           onVoiceInputComplete={(spokenText) => {
@@ -169,39 +145,7 @@ function FormPage() {
 
         />
 
-        <br></br>
-        <label htmlFor='preferredtimeofhelp'>How soon do you need help?</label>
-        <div>
-          <label>
-            <input
-              type='radio'
-              name='preferredtimeofhelp'
-              value='ASAP'
-              onChange={handleChanges}
-            />
-            <span>As soon as possible</span>
-          </label>
-
-          <label>
-            <input
-              type='radio'
-              name='preferredtimeofhelp'
-              value='Today is fine'
-              onChange={handleChanges}
-            />
-            <span>Today is fine</span>
-          </label>
-
-          <label>
-            <input
-              type='radio'
-              name='preferredtimeofhelp'
-              value='No rush'
-              onChange={handleChanges}
-            />
-            <span>No rush</span>
-          </label>
-        </div>
+      
         <br />
         <button type='submit' onClick={() => navigate(ConfirmationPage)}>Submit</button>
       </form>
