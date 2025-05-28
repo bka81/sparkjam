@@ -60,27 +60,21 @@
 
 // export default VoiceInput;
   
-import React, { useState } from 'react';
+import React from 'react';
 import useSpeechToText from './VoiceToTextFunctionality';
 
-const VoiceInput = ({ value, onVoiceInputComplete }) => {
-  const [textInput, setTextInput] = useState('');
+const VoiceInput = ({ value, onChange, onVoiceInputComplete }) => {
   const { isListening, transcript, startListening, stopListening } = useSpeechToText({ continuous: true });
 
   const startStopListening = () => {
-    if (isListening) {
-      stopVoiceInput();
-    } else {
-      startListening();
-    }
+    isListening ? stopVoiceInput() : startListening();
   };
 
   const stopVoiceInput = () => {
     const finalTranscript = transcript.length
-      ? (textInput.length ? textInput + ' ' : '') + transcript
-      : textInput;
+      ? (value.length ? value + ' ' : '') + transcript
+      : value;
 
-    setTextInput(finalTranscript);
     onVoiceInputComplete(finalTranscript);
     stopListening();
   };
@@ -88,7 +82,7 @@ const VoiceInput = ({ value, onVoiceInputComplete }) => {
   return (
     <div style={{ display: 'block', textAlign: 'left', width: '96%' }}>
       <button
-        type="button" 
+        type="button"
         onClick={startStopListening}
         style={{
           backgroundColor: isListening ? '#FFA500' : '#163D61',
@@ -119,13 +113,11 @@ const VoiceInput = ({ value, onVoiceInputComplete }) => {
           color: '#333',
         }}
         disabled={isListening}
-        value={isListening ? textInput + (transcript.length ? ' ' + transcript : '') : textInput}
-        onChange={(e) => setTextInput(e.target.value)}
+        value={isListening && transcript.length ? value + ' ' + transcript : value}
+        onChange={onChange}
       />
     </div>
   );
 };
 
 export default VoiceInput;
-
-
