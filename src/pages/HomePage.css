@@ -1,10 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Jockey+One&family=Josefin+Sans:wght@400;600&display=swap');
 
-html, body{
+:root {
+  --base-font-size: 100%;
+  --brightness: 100%;
+}
+
+html, body {
   height: 100%;
   margin: 0;
   padding: 0;
+  font-size: var(--base-font-size);
+  filter: brightness(var(--brightness));
+  transition: all 0.3s ease-in-out;
+  overflow-x: hidden;
 }
+
 .homepage {
   font-family: 'Josefin Sans', sans-serif;
   background-color: #F8FAFC;
@@ -21,7 +31,7 @@ h1, h2, h3 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding:30px 10% 7px 10%;
+  padding: 30px 10% 7px 10%;
   background-color: #D9EAFD;
   flex-wrap: wrap;
   gap: 40px;
@@ -36,17 +46,17 @@ h1, h2, h3 {
 
 .hero-left h1 {
   color: #4A5B6A;
-  font-size: 5rem;
+  font-size: clamp(2rem, 5vw, 5rem);
   margin-bottom: 20px;
   line-height: 1.2;
 }
 
 .hero-left p {
   color: #6C7A89;
-  font-size: 2.6rem;
+  font-size: clamp(1rem, 2.6vw, 2.4rem);
   max-width: 520px;
   margin-bottom: -40px;
-  margin-top:-20px;
+  margin-top: -20px;
   line-height: 1.6;
 }
 
@@ -72,7 +82,7 @@ h1, h2, h3 {
   text-align: center;
   min-width: 280px;
   margin-bottom: -30px;
-  margin-top:10px;
+  margin-top: 10px;
 }
 
 .penguin-wrapper {
@@ -88,7 +98,7 @@ h1, h2, h3 {
   width: 400px;
   height: auto;
   z-index: 1;
-  top:20px;
+  top: 20px;
 }
 
 .hero-image {
@@ -102,7 +112,6 @@ h1, h2, h3 {
   filter: drop-shadow(2px 4px 8px rgba(0, 0, 0, 0.2));
 }
 
-
 @keyframes bounce {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-15px); }
@@ -115,40 +124,151 @@ h1, h2, h3 {
   margin-top: -2px;
 }
 
-.homepage-bottom{
+.settings-panel {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #e3f1ff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
+  max-width: 90%;
+}
+
+.slider-group {
   display: flex;
   flex-direction: column;
-  flex:1;
+  align-items: center;
+  font-size: 2.8rem;
+  color: #163D61;
+}
+
+
+.slider-group label {
+  font-weight: 600;
+  margin-bottom: 4px;
+  font-size: 1.8rem;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.slider-value {
+  font-weight: normal;
+  font-size: 1.5rem;
+  color: #4A5B6A;
+}
+
+.slider-labels {
+  display: flex;
+  justify-content: space-between;
+  width: 160px;
+  margin-top: 6px;
+  font-size: 0.9rem;
+  color: #6C7A89;
+}
+
+.slider-labels .highlight {
+  color: #EF8A06;
+  font-weight: bold;
+}
+
+.slider-group input[type="range"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 300px;
+  height: 20px;
+  background: #cddbea;
+  border-radius: 10px;
+  outline: none;
+  transition: background 0.3s ease;
+  cursor: pointer;
+}
+
+.slider-group input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 26px;
+  width: 26px;
+  background: #163D61;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s;
+  border: 1px solid white;
+}
+
+
+.slider-group input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+  background: #EF8A06;
+}
+
+.slider-group input[type="range"]::-moz-range-thumb {
+  height: 20px;
+  width: 20px;
+  background: #EF8A06;
+  border-radius: 50%;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.homepage-bottom {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
   margin-top: 35px;
 }
 
 .cards-section {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
+  align-items: stretch;
   gap: 50px;
-  padding: 10px 10%;
+  padding: 10px 5%;
   max-width: 1500px;
-  flex: 1;
+  margin: 0 auto;
 }
 
 .footer {
-  background-color: #163d61c2;
+  background-color: #163D61;
   text-align: center;
-  padding: 5px;
-  margin-bottom: 0 auto;
+  padding: 10px 20px;
+  margin-top: auto;
+}
 
-}
-.footer .links-to-about-contact{
+.footer .links-to-about-contact {
   display: flex;
-  gap: 30px;
+  flex-wrap: wrap;
+  gap: 20px;
   justify-content: center;
-  font-size: 1.4rem;
+  font-size: clamp(1rem, 1.2vw, 1.4rem);
 }
+
 .links-to-about-contact a {
   text-decoration: none;
   color: white;
 }
-.links-to-about-contact a:hover{
+
+.links-to-about-contact a:hover {
   color: #EF8A06;
-} 
+}
+
+.reset-btn {
+  margin-top: 12px;
+  font-size: 1rem;
+  background-color: #163D61;
+  color: white;
+  border: 2px solid #163D61;
+  padding: 8px 30px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 180px;
+}
+
+.reset-btn:hover {
+  background-color: #EF8A06;
+  color: white;
+}

@@ -1,57 +1,60 @@
 .card-option {
   background-color: #D9EAFD;
   border-radius: 20px;
-  width: 600px;
-  height: 250px;
-  padding: 25px 10px;
+  width: 100%;
+  max-width: 550px;
+  padding: 25px 20px;
   box-shadow: 0 12px 30px rgba(154, 166, 178, 0.15);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 100px;
+  gap: 30px;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   cursor: pointer;
   text-align: center;
-  min-height: 250px;
-  margin-top: -10px;
+  min-height: auto;
   text-decoration: none;
+  flex: 1 1 300px;
+  margin: auto;
 }
 
-
-
-.option-title-image{
-  margin-top: -120px;
+.option-title-image {
   display: flex;
   flex-direction: row;
-  align-items:self-start;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
 }
 
 .card-image {
-  width: 200px;
-  height: 200px;
+  width: 160px;
+  height: 160px;
+  object-fit: contain;
   border-radius: 60%;
   border-top-right-radius: 0%;
-  object-fit: cover;
-
+  flex-shrink: 0;
 }
-
 
 .card-option h2 {
   font-family: 'Jockey One', sans-serif;
   color: #4A5B6A;
-  font-size: 4.3rem;
-  margin-bottom: 25px;
-  margin-top: -20px;
-  line-height: 1;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  margin-bottom: 10px;
+  line-height: 1.2;
+  text-align: center;
 }
+
 .card-option p {
   color: #6C7A89;
-  font-size: 2.2rem;
-  line-height: 1.3;
-  padding: 0 12px;
-  margin-bottom: 40px;
-  flex-grow: 1;
+  font-size: clamp(1rem, 2.2vw, 2rem);
+  line-height: 1.4;
+  margin: 0;
   text-align: left;
+  max-width: 100%;
+  flex: 1;
+  word-break: break-word;
 }
 
 .card-option:hover {
@@ -60,10 +63,10 @@
   background-color: #ED8B08;
 }
 
-.card-option:hover h2{
+.card-option:hover h2 {
   color: white;
 }
 
-.card-option:hover p{
+.card-option:hover p {
   color: white;
 }
