@@ -147,6 +147,7 @@ button {
     width: 100%;
     max-width: 1000px;
     font-size: 20px;
+    font-family: 'Jockey One', sans-serif;
 }
 
 button:hover {

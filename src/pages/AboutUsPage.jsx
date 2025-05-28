@@ -1,17 +1,19 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 
 const AboutUs = () => {
   return (
     <div style={{
       minHeight: '100vh',
       backgroundColor: '#D9EAFD',
-      padding: '20px 25px 40px',
+      padding: '120px 25px 40px',
       fontFamily: "'Jockey One', sans-serif",
       color: '#4A5B6A',
       boxSizing: 'border-box',
       maxWidth: '100vw',
       overflowX: 'hidden',
     }}>
+      <Link to="/" className="go-home-button">Go Back Home</Link>
       <div style={{ 
         maxWidth: '600px', // narrower for shorter lines
         margin: '0 auto', 
@@ -20,7 +22,7 @@ const AboutUs = () => {
       }}>
         <h1 style={{
           textAlign: 'center',
-          fontSize: '2.5rem',
+          fontSize: '3rem',
           marginTop: '10px',
           marginBottom: '30px',
           color: '#4A5B6A',
@@ -32,14 +34,14 @@ const AboutUs = () => {
           textAlign: 'center',
           fontStyle: 'normal',
           color: '#1a3c5d',
-          fontSize: '1.2rem',
+          fontSize: '2rem',
           marginBottom: '40px',
         }}>
           Guiding you through life's how-tos.
         </h2>
 
         <p style={{
-          fontSize: '1.3rem',
+          fontSize: '1.6rem',
           lineHeight: '1.6',
           marginBottom: '25px',
           textAlign: 'left',
@@ -49,7 +51,7 @@ const AboutUs = () => {
         </p>
 
         <p style={{
-          fontSize: '1.3rem',
+          fontSize: '1.6rem',
           lineHeight: '1.6',
           marginBottom: '25px',
           textAlign: 'left',
@@ -59,7 +61,7 @@ const AboutUs = () => {
         </p>
 
         <p style={{
-          fontSize: '1.3rem',
+          fontSize: '1.6rem',
           lineHeight: '1.6',
           marginBottom: '15px',
           textAlign: 'center',
@@ -70,7 +72,7 @@ const AboutUs = () => {
         </p>
 
         <p style={{
-          fontSize: '1.3rem',
+          fontSize: '1.6rem',
           lineHeight: '1.6',
           marginBottom: '25px',
           textAlign: 'left',

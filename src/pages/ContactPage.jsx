@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from 'react-router-dom';
 
 const ContactUs = () => {
   const [submitted, setSubmitted] = useState(false);
@@ -24,6 +25,7 @@ const ContactUs = () => {
         justifyContent: 'center',
       }}
     >
+      <Link to="/" className="go-home-button">Go Back Home</Link>
       <div
         style={{
           width: '100%',
@@ -31,24 +33,24 @@ const ContactUs = () => {
           padding: '20px',
         }}
       >
-        <h1 style={{ textAlign: 'center', fontSize: '2.5rem', marginBottom: '20px' }}>
+        <h1 style={{ textAlign: 'center', fontSize: '3rem', marginBottom: '20px' }}>
           Contact Us
         </h1>
-        <p style={{ textAlign: 'center', fontSize: '1.3rem', marginBottom: '30px' }}>
+        <p style={{ textAlign: 'center', fontSize: '2rem', marginBottom: '30px' }}>
           Got a question? Need more help? We're always here to listen.
         </p>
 
         <div style={{ minHeight: '500px' }}>
           {!submitted ? (
             <>
-              <div style={{ textAlign: 'center', fontSize: '1.2rem', marginBottom: '30px' }}>
+              <div style={{ textAlign: 'center', fontSize: '1.6rem', marginBottom: '30px' }}>
                 <p>📧 Email: <strong>support@penguinsteps.com</strong></p>
                 <p>☎️ Phone: <strong>1-800-PENGUIN</strong></p>
               </div>
 
               <form onSubmit={handleSubmit} style={{ maxWidth: '600px', margin: '0 auto' }}>
                 <div style={{ marginBottom: '20px' }}>
-                  <label style={{ fontSize: '1.3rem', fontWeight: 'bold', display: 'block', marginBottom: '8px' }}>
+                  <label style={{ fontSize: '1.6rem', fontWeight: 'bold', display: 'block', marginBottom: '8px' }}>
                     Your Name:
                   </label>
                   <input
@@ -66,7 +68,7 @@ const ContactUs = () => {
                 </div>
 
                 <div style={{ marginBottom: '20px' }}>
-                  <label style={{ fontSize: '1.3rem', fontWeight: 'bold', display: 'block', marginBottom: '8px' }}>
+                  <label style={{ fontSize: '1.6rem', fontWeight: 'bold', display: 'block', marginBottom: '8px' }}>
                     Your Email:
                   </label>
                   <input
@@ -84,7 +86,7 @@ const ContactUs = () => {
                 </div>
 
                 <div style={{ marginBottom: '25px' }}>
-                  <label style={{ fontSize: '1.3rem', fontWeight: 'bold', display: 'block', marginBottom: '8px' }}>
+                  <label style={{ fontSize: '1.6rem', fontWeight: 'bold', display: 'block', marginBottom: '8px' }}>
                     How can we help you?
                   </label>
                   <textarea
@@ -107,9 +109,9 @@ const ContactUs = () => {
                     style={{
                       padding: '20px',
                       width: '50%',
-                      fontSize: '1.3rem',
+                      fontSize: '2rem',
                       fontWeight: 'bold',
-                      backgroundColor: '#4A5B6A',
+                      backgroundColor: '#163D61',
                       color: 'white',
                       border: 'none',
                       borderRadius: '4px',
