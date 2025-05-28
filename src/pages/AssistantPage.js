@@ -25,7 +25,7 @@ const AssistantPage = () => {
             setConversation((prev)=>prev.filter(msg => msg.role ==='system'));
 
         }
-    },[]);
+    },[setConversation]);
 
     return(
         <div className="chatPage">
