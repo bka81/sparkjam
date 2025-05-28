@@ -1,5 +1,5 @@
 import './CardOption.css';
-import { useNavigate, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function CardOption({ title, description, route, image }) {
 
