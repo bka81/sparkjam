@@ -3,27 +3,52 @@
 html, body {
   height: 100%;
   margin: 0;
-  background-color: #F8FAFC;
+  padding: 0;
 }
 
 .chat-page {
     display: flex;
     flex-direction: column;
     height: 100vh;
-    max-width: 700px;
-    margin: 0 auto;
-    padding: 2rem 0 0;
+    height: 100vh;
     background-color: #F8FAFC;
     font-family: 'Josefin Sans', sans-serif;
+    overflow: hidden; 
+}
+.go-home-button {
+  position:fixed;
+  top: 20px;
+  left: 20px;
+  font-size: 2rem;
+  text-decoration: none;
+  background-color: #163D61;
+  color:white;
+  font-family: 'Jockey One', sans-serif;
+  padding: 10px 18px; 
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  z-index: 100;
+  transition: background-color 0.2s ease;
+
 }
 
+.go-home-button:hover {
+  background-color: #EF8A06;
+}
+
+.penguin-part{
+  display: flex;
+  flex-direction: row;
+}
 .chat-header {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 1rem;
-    font-family: 'Jockey One', sans-serif;
-    margin-left: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 .chat-header .penguin-chat-mascot {
@@ -31,7 +56,9 @@ html, body {
     display: inline-block;
     width: 360px;
     height: 360px;
-    margin-left: -30px;
+ 
+    margin-top: 100px;
+    
    
 }
 .chat-header .ellipse-chat-image {
@@ -133,6 +160,7 @@ html, body {
     background-color: #F8FAFC;
     align-items: center;
     z-index: 10;
+    margin-top: 20px;
   }
   
   .chat-input textarea {
@@ -161,8 +189,37 @@ html, body {
   }
   
   .chat-input button:hover {
-    background-color: #1e4d7a;
+    background-color: #EF8A06;
   }
 
 
-  
+  .recommended-questions {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+    width: 100%;
+    width: 100vh;
+    margin-inline: auto;
+  }
+
+  .recommended-questions button{
+    flex: 1 1 250px; 
+    max-width: 500px;
+    min-width: 250px;
+    font-size: 2rem;
+    background-color: #163D61;
+    border: 2px solid #bfc9d5;
+    border-radius: 10px;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-family: 'Josefin Sans', sans-serif;
+    transition: background-color 0.2s ease;
+    white-space: nowrap;
+ 
+  }
+
+  .recommended-questions button:hover {
+    background-color: #EF8A06;
+  }

@@ -18,7 +18,8 @@ export const ChatProvider = ({ children }) => {
 
             Then continue in a new line, as a casual, helpful volunteer:
             “Hi there! My name is Sam. Happy to help you today!”. Continue to explain
-            instructions in simple, step-by-step instructions when the user asks a question.
+            instructions in simple, step-by-step instructions when the user asks a question. Try to sound human
+            and alternate between different names when introducing yourself.
             `.trim()
         }
     ]);

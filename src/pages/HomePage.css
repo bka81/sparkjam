@@ -127,19 +127,26 @@ h1, h2, h3 {
   justify-content: center;
   gap: 50px;
   margin: 2px auto;
-  padding: 10px 20px;
-  background-color: #e3f1ff;
+  padding: 5px 20px;
+  background-color: #D9EAFD;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   flex-wrap: wrap;
   max-width: 90%;
+  border: solid #A7C7EA; 
+  
+}
+.settings-panel .icon-colored{
+  color: #163D61;
+}
+.settings-panel .slider-group label {
+  color: #163D61;
 }
 
 .slider-group {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 2.8rem;
   color: #163D61;
 }
 
@@ -147,7 +154,7 @@ h1, h2, h3 {
 .slider-group label {
   font-weight: 600;
   margin-bottom: 4px;
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   display: flex;
   gap: 8px;
   align-items: center;
@@ -156,7 +163,7 @@ h1, h2, h3 {
 .slider-value {
   font-weight: normal;
   font-size: 1.5rem;
-  color: #4A5B6A;
+  color: #384451;
 }
 
 .slider-labels {
@@ -189,7 +196,7 @@ h1, h2, h3 {
   -webkit-appearance: none;
   height: 26px;
   width: 26px;
-  background: #163D61;
+  background: #326aa0;
   border-radius: 50%;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   transition: transform 0.2s;

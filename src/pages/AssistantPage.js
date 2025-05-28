@@ -1,5 +1,7 @@
 import React, {useContext, useRef, useState, useEffect } from 'react';
 import { ChatContext } from '../chat/chatAssistantContext';
+import { Link } from 'react-router-dom';
+
 import './AssistantPage.css';
 
 const AssistantPage = () => {
@@ -27,16 +29,34 @@ const AssistantPage = () => {
         }
     },[setConversation]);
 
+
     return(
-        <div className="chatPage">
+        <div className="chat-page">
+            <Link to="/" className="go-home-button">Go Back Home</Link>
             {chatNotOpened && <div className="chat-header">
-                <div className="penguin-chat-mascot">
-                    <img src="/ellipse.png" alt="Ellipse" className="ellipse-chat-image" />
-                    <img src="/penguin.png" alt="Penguin Mascot" className="penguin-chat-image" />
+                <div className='penguin-part'>
+                    <div className="penguin-chat-mascot">
+                        <img src="/ellipse.png" alt="Ellipse" className="ellipse-chat-image" />
+                        <img src="/penguin.png" alt="Penguin Mascot" className="penguin-chat-image" />
+                    </div>
+                    <div>
+                        <h1>Need help with tech?<br/>I'm here for you!</h1>
+                        <p>Just type your question below and <br />I'll guide you step by step.</p>
+                    </div>
                 </div>
-                <div>
-                    <h1>Need help with tech?<br/>I'm here for you!</h1>
-                    <p>Just type your question below and <br />I'll guide you step by step.</p>
+                <div className='recommended-questions'>
+                    <button onClick={() => {
+                        setChatNotOpened(false);
+                        sendMessage("I want to talk to a volunteer");
+                    }}>
+                    I want to talk to a volunteer
+                    </button>
+                    <button onClick={() => {
+                        setChatNotOpened(false);
+                        sendMessage("How do I use Zoom?");
+                    }}>
+                    How do I use Zoom?
+                    </button>
                 </div>
             </div>
             }        
@@ -68,7 +88,7 @@ const AssistantPage = () => {
                         }}
                         placeholder='Ask me anything...'
                     ></textarea>
-                    <button onClick = {handleSend}>Send</button>
+                    <button onClick = {handleSend}>Send Message</button>
                 </div>
             </div>   
         </div>

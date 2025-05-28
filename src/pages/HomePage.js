@@ -39,7 +39,7 @@ function HomePage() {
               id="fontSizeSlider"
               type="range"
               min="80"
-              max="120"
+              max="150"
               value={fontSize}
               onChange={(e) => setFontSize(e.target.value)}
               step="1"
@@ -64,7 +64,7 @@ function HomePage() {
               id="brightnessSlider"
               type="range"
               min="80"
-              max="120"
+              max="110"
               value={brightness}
               onChange={(e) => setBrightness(e.target.value)}
               step="1"

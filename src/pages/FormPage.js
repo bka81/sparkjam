@@ -4,6 +4,7 @@ import './FormPage.css';
 import VoiceInput from './VoiceInput'; // Make sure this path is correct
 import { useNavigate } from 'react-router-dom';
 import ConfirmationPage from './ConfirmationPage';
+import { Link } from 'react-router-dom';
 
 function FormPage() {
   const navigate = useNavigate(); 
@@ -35,6 +36,7 @@ function FormPage() {
 
   return (
     <div className='container'>
+      <Link to="/" className="go-home-button">Go Back Home</Link>
       <h1>Question Form</h1>
       <form onSubmit={handleSubmit} >
         <label htmlFor='firstname'>First Name 👤</label>
