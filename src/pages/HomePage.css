@@ -72,11 +72,6 @@ h1, h2, h3 {
   transition: background 0.3s ease, transform 0.2s ease;
 }
 
-.hero-button:hover {
-  background-color: #005b41;
-  transform: translateY(-2px);
-}
-
 .hero-right {
   flex: 1;
   text-align: center;
@@ -271,4 +266,10 @@ h1, h2, h3 {
 .reset-btn:hover {
   background-color: #EF8A06;
   color: white;
+}
+
+.icon-colored {
+  color: #163D61;
+  font-size: 2rem;
+  margin-right: 10px;
 }

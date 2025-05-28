@@ -30,9 +30,10 @@ function HomePage() {
 
       <div className="settings-panel">
         <div className="slider-group">
-          <label htmlFor="fontSizeSlider">
-            🅰 Font Size <span className="slider-value">{fontSize}%</span>
-          </label>
+        <label htmlFor="fontSizeSlider">
+          <i className="fas fa-text-height icon-colored"></i> Font Size <span className="slider-value">{fontSize}%</span>
+        </label>
+
           <div className="slider-wrapper">
             <input
               id="fontSizeSlider"
@@ -53,9 +54,11 @@ function HomePage() {
         </div>
 
         <div className="slider-group">
-          <label htmlFor="brightnessSlider">
-            🔆 Brightness <span className="slider-value">{brightness}%</span>
-          </label>
+        <label htmlFor="brightnessSlider">
+          <i className="fas fa-sun icon-colored"></i> Brightness <span className="slider-value">{brightness}%</span>
+        </label>
+
+
           <div className="slider-wrapper">
             <input
               id="brightnessSlider"
