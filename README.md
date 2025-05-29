@@ -1,4 +1,4 @@
-# <img src="https://cdn-icons-png.flaticon.com/512/6402/6402744.png" style="filter: invert(100%);" width="40" alt="Penguin Icon" /><br> PenguinSteps
+# <img src="https://cdn-icons-png.flaticon.com/512/6402/6402744.png"  width="40" alt="Penguin Icon" /><br> PenguinSteps
 
 **PenguinSteps** is a senior-friendly web assistant designed to help older adults navigate everyday questions with ease. Built with simplicity, accessibility, and clarity in mind, it offers AI-powered guidance through step-by-step explanations in plain language.
 
