@@ -1,3 +1,6 @@
+// In creation of some parts of the following file, OpenAI's ChatGPT was referred to and used for assitance with code generation
+// Prompted by: Beyzanur 
+// Tool used: ChatGPT (gpt-4-turbo), https://chat.openai.com
 import './HomePage.css';
 import CardOption from '../components/CardOption';
 import { Link } from 'react-router-dom';

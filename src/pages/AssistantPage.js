@@ -1,3 +1,7 @@
+// In creation of some parts of the following function OpenAI's ChatGPT was referred to and used for assitance with code generation
+// Prompted by: Beyzanur 
+// Tool used: ChatGPT (gpt-4-turbo), https://chat.openai.com
+
 import React, {useContext, useRef, useState, useEffect } from 'react';
 import { ChatContext } from '../chat/chatAssistantContext';
 import { Link } from 'react-router-dom';
